@@ -44,14 +44,6 @@
 
  }
 
- div {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-   margin-bottom: 5%;
- }
-
  h2 {
    margin-top: 3%;
  }
@@ -66,7 +58,7 @@
  td {
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url('/Users/admin/Documents/puissance/puissance-4/assets/img/b9ec007e692543088cf247389a8ac8c5.png');
+  background-image: url('/Users/admin/Documents/puissance/puissance-4/assets/img/Genshin-Impact-Candace-date-de-sortie-de-Nilou-et-capacites-1200x900.jpeg');
  }
 
  img {
