@@ -3,6 +3,7 @@ footer {
     flex-direction: row;
     justify-content: space-around;
     background-color: #0D0A26;
+<<<<<<< HEAD
     height: 500px;
     margin-top: 200px;
     color: white;
@@ -56,21 +57,81 @@ footer {
 }
 
 .footer-nav li::before {
+=======
+    height: 300px;
+    margin-top: 50px;
+  }
+ 
+  .footer-title {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Open Sans';
+  }
+ 
+  .coord-name {
+    color: orange;
+    margin-right: 5px;
+  }
+ 
+  .coord {
+    display: flex;
+    flex-direction: row;
+  }
+ 
+  .informations {
+    display: flex;
+    flex-direction: column;
+  }
+ 
+  .informations p {
+    margin: 10px 0px
+  }
+ 
+ 
+  #copyright {
+    margin-top: auto;
+  }
+ 
+  .media-links {
+    margin-top: 10px;
+  }
+ 
+  .media-link {
+    padding: 10px;
+    background-color: rgb(229, 123, 18);
+  }
+ 
+  .footer-nav li::before {
+>>>>>>> 1a7a9c3c7e1ce59eb0f19a98a8baacbd31ac5264
     content: "\2022";
     color: rgb(229, 123, 18);
     font-weight: bold;
     display: inline-block;
     width: 1em;
     margin-left: -1em;
+<<<<<<< HEAD
 }
 
 .footer-nav {
+=======
+  }
+ 
+  .footer-nav {
+>>>>>>> 1a7a9c3c7e1ce59eb0f19a98a8baacbd31ac5264
     height: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+<<<<<<< HEAD
 }
 
 .footer-nav li {
     margin: 10px 0px;
 }
+=======
+  }
+ 
+  .footer-nav li {
+    margin: 10px 0px;
+  }
+>>>>>>> 1a7a9c3c7e1ce59eb0f19a98a8baacbd31ac5264
