@@ -13,17 +13,10 @@
 
 <body>
     <header id="myaccountheader">
-        <nav>
-            <p id="logo">The Power Of Memory</p>
+        <?php
+        include './assets/php/view/header.inc.php'
 
-            <ul>
-            <li><a href="index.php">Accueil</a></li>
-                <li><a href="memory.php">Jeu</a></li>
-                <li><a href="score.php">Scores</a></li>
-                <li><a href="contact.php">Nous contacter</a></li>
-                <li><a href="myaccount.php">Mon compte</a></li>
-            </ul>
-        </nav>
+        ?>
         <div class="titles">
             <h1>Mon Espace</h1>
             <h2>Ici vous pouvez changer votre mot de passe ou mail</h2>

@@ -13,23 +13,10 @@
 
 <body>
     <header>
-        <nav>
-            <div id="profilee">
-                <img src="assets/images/ayaya.webp" alt="ayaya" id="ayaya">
-                <p id="profile">Pseudo<br>Level 23 | Title</p>
-            </div>
+        <?php
+        include './assets/php/view/header.inc.php'
 
-            <p id="logo">The Power Of Memory</p>
-
-            <ul>
-            <li><a href="index.php">Accueil</a></li>
-                <li><a href="memory.php">Jeu</a></li>
-                <li><a href="score.php">Scores</a></li>
-                <li><a href="contact.php">Nous contacter</a></li>
-                <li><a href="myaccount.php">Mon compte</a></li>
-            </ul>
-
-        </nav>
+        ?>gi
         <div class="titles">
             <h1>Score</h1>
             <h2>Venez challenger les cerveaux les plus agiles !</h2>
