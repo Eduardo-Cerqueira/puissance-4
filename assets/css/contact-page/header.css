@@ -1,15 +1,33 @@
 header {
+<<<<<<< HEAD:assets/css/contact-page/header.css
     height: 10vh;
     width: 100%;
+=======
+    height: 40vh;
+    width: 100%;
+    background-image: url("/assets/img/header.jpg");
+>>>>>>> anthony-puissance-4:assets/login_page/login_header.css
     color: white;
     font-family: 'Open Sans', sans-serif;
 }
 
 nav {
+    position: fixed;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+<<<<<<< HEAD:assets/css/contact-page/header.css
     font-weight: bold;
+=======
+    align-items: center;
+    font-weight: bold;
+    border-bottom: 1px solid white;
+    height: 10vh;
+    background-color: rgb(110, 50, 94);
+    top:0;
+    left:0;
+>>>>>>> anthony-puissance-4:assets/login_page/login_header.css
 }
 
 nav ul {
@@ -17,7 +35,11 @@ nav ul {
     flex-direction: row;
     flex-wrap: wrap;
     margin: 10px;
+<<<<<<< HEAD:assets/css/contact-page/header.css
     width: 450px;
+=======
+    width: 550px;
+>>>>>>> anthony-puissance-4:assets/login_page/login_header.css
     justify-content: space-between;
 }
 
@@ -38,8 +60,6 @@ nav a:hover {
 }
 
 nav p {
-    /*     margin-left: 15%; */
-    margin-top: 10px;
     font-size: 15px;
     letter-spacing: 1px;
 }
@@ -48,13 +68,20 @@ h1 {
     text-transform: uppercase;
     font-size: 100px;
     font-weight: bold;
+<<<<<<< HEAD:assets/css/contact-page/header.css
     background: linear-gradient(-45deg, #ee7752,
             #e73c7e, #23a6d5, #23d5ab);
     background-size: 300% 300%;
     animation: gradient 15s ease-in-out infinite;
+=======
+    background: linear-gradient(-45deg, #11d11e,
+            #10d8ba, #1125dc, #32ba98);
+    background-size: 400% 400%;
+    animation: gradient 10s ease-in-out infinite;
+>>>>>>> anthony-puissance-4:assets/login_page/login_header.css
     background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
+    -webkit-background-clip: text;       /* support pour un navi */
+    color: transparent;   /* afin de voir se qu'il y a derrière  */
 }
 
 h2 {
@@ -77,6 +104,7 @@ header input {
     padding: 15px 35px;
     color: white;
     border: none;
+<<<<<<< HEAD:assets/css/contact-page/header.css
 }
 
 .titles * {
@@ -84,3 +112,24 @@ header input {
 
 
 }
+=======
+    font-family: 'Open Sans';
+    transition: transform 700ms ease-in-out, box-shadow 700ms ease-in-out, background-color 700ms ease-in-out;
+}
+
+header input:hover {
+    background-color: #bd2ac5;
+    box-shadow: 0px 0px 10px #ffffff;
+    transform: scale(1.1);
+}
+
+.titles * {
+    margin: 10px 0px;
+}
+
+#myaccountheader {
+    height: 50vh;
+    background-image: url("/Users/admin/Documents/puissance/puissance-4/assets/img/andreasbg.png");
+    box-shadow: none;
+}
+>>>>>>> anthony-puissance-4:assets/login_page/login_header.css

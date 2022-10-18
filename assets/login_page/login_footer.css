@@ -5,10 +5,7 @@ footer {
     background-color: #0D0A26;
     height: 500px;
     margin-top: 200px;
-<<<<<<< HEAD:assets/css/index-page/footer.css
-=======
     color: white;
->>>>>>> anthony-puissance-4:game-page/memory_footer.css
 }
 
 .footer-title {
@@ -44,41 +41,27 @@ footer {
 }
 
 .media-links {
-<<<<<<< HEAD:assets/css/index-page/footer.css
-    margin-top: 10px;
-=======
     display: flex;
     flex-direction: row;
->>>>>>> anthony-puissance-4:game-page/memory_footer.css
 }
 
 .media-link {
     padding: 10px;
     background-color: rgb(229, 123, 18);
-<<<<<<< HEAD:assets/css/index-page/footer.css
-}
-
-.media-link:hover {
-=======
     margin: 0 2px;
 }
 
 .media-link:hover{
->>>>>>> anthony-puissance-4:game-page/memory_footer.css
     background-color: rgb(188, 103, 18);
 }
 
 .footer-nav li::before {
-<<<<<<< HEAD:assets/css/index-page/footer.css
     content: "\2022";
     color: rgb(229, 123, 18);
     font-weight: bold;
     display: inline-block;
     width: 1em;
     margin-left: -1em;
-=======
-
->>>>>>> anthony-puissance-4:game-page/memory_footer.css
 }
 
 .footer-nav {
@@ -89,11 +72,5 @@ footer {
 }
 
 .footer-nav li {
-<<<<<<< HEAD:assets/css/index-page/footer.css
-=======
-    margin: 10px 0px;
-}
-  .footer-nav li {
->>>>>>> anthony-puissance-4:game-page/memory_footer.css
     margin: 10px 0px;
 }
