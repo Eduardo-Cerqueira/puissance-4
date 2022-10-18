@@ -37,21 +37,21 @@
 
             <div class="card">
                 <div>
-                    <img class="svg-coord" src="/puissance-4/assets/img/tel.svg" alt="">
+                    <img class="svg-coord" src="assets/images/tel.svg" alt="">
                 </div>
                 <p>06 05 04 03 02</p>
             </div>
 
             <div class="card">
                 <div>
-                    <img class="svg-coord" src="/puissance-4/assets/img/email-svgrepo-com.svg" alt="">
+                    <img class="svg-coord" src="assets/images/email-svgrepo-com.svg" alt="">
                 </div>
                 <p>support@powerofmemory.com</p>
             </div>
 
             <div class="card">
                 <div>
-                    <img class="svg-coord" src="/puissance-4/assets/img/loc.svg" alt="">
+                    <img class="svg-coord" src="assets/images/loc.svg" alt="">
                 </div>
                 <p>paris</p>
             </div>
