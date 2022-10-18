@@ -6,7 +6,7 @@
     background-color: rgb(255, 255, 255);
     height: 500px;
     transform: translateY(460px);
-    transition: 500ms ease-in-out;
+    transition: transform 500ms ease-in-out;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
