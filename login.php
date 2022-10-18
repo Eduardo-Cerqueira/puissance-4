@@ -13,17 +13,10 @@
 
 <body>
     <header id="myaccountheader">
-        <nav>
-            <p id="logo">The Power Of Memory</p>
+        <?php
+        include './assets/php/view/header.inc.php'
 
-            <ul>
-            <li><a href="index.php">Accueil</a></li>
-                <li><a href="memory.php">Jeu</a></li>
-                <li><a href="score.php">Scores</a></li>
-                <li><a href="contact.php">Nous contacter</a></li>
-                <li><a href="myaccount.php">Mon compte</a></li>
-            </ul>
-        </nav>
+        ?>
         <div class="titles">
             <h1>Connexion</h1>
         </div>
@@ -56,11 +49,17 @@
             </div>
 
             <div class="media-links">
-                <a class="media-link" href="#"><img src="/Users/admin/Documents/puissance/puissance-4/assets/img/icons8-facebook-nouveau.svg" alt=""></a>
-                <a class="media-link" href="#"> <img src="/Users/admin/Documents/puissance/puissance-4/assets/img/icons8-twitter.svg" alt=""></a>
-                <a class="media-link" href="#"> <img src="/Users/admin/Documents/puissance/puissance-4/assets/img/icons8-logo-google.svg" alt=""></a>
-                <a class="media-link" href="#"><img src="/Users/admin/Documents/puissance/puissance-4/assets/img/pinterest-2.svg" alt=""></a>
-                <a class="media-link" href="#"> <img src="/Users/admin/Documents/puissance/puissance-4/assets/img/icons8-instagram.svg" alt=""></a>
+                <a class="media-link" href="#"><img
+                        src="/Users/admin/Documents/puissance/puissance-4/assets/img/icons8-facebook-nouveau.svg"
+                        alt=""></a>
+                <a class="media-link" href="#"> <img
+                        src="/Users/admin/Documents/puissance/puissance-4/assets/img/icons8-twitter.svg" alt=""></a>
+                <a class="media-link" href="#"> <img
+                        src="/Users/admin/Documents/puissance/puissance-4/assets/img/icons8-logo-google.svg" alt=""></a>
+                <a class="media-link" href="#"><img
+                        src="/Users/admin/Documents/puissance/puissance-4/assets/img/pinterest-2.svg" alt=""></a>
+                <a class="media-link" href="#"> <img
+                        src="/Users/admin/Documents/puissance/puissance-4/assets/img/icons8-instagram.svg" alt=""></a>
             </div>
 
             <p id="copyright">© 2022 Coding Factory Made with ❤️</p>
