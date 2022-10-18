@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link rel="stylesheet" href="assets/css/header.css">
-    <link rel="stylesheet" href="assets/css/register-login.css">
+    <link rel="stylesheet" href="assets/css/myaccount.css">
     <link rel="stylesheet" href="assets/css/footer.css">
-    <title>Inscription</title>
 </head>
 
 <body>
@@ -17,25 +17,45 @@
             <p id="logo">The Power Of Memory</p>
 
             <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="memory.html">Jeu</a></li>
-                <li><a href="score.html">Scores</a></li>
-                <li><a href="contact.html">Nous contacter</a></li>
-                <li><a href="myaccount.html">Mon compte</a></li>
+            <li><a href="index.php">Accueil</a></li>
+                <li><a href="memory.php">Jeu</a></li>
+                <li><a href="score.php">Scores</a></li>
+                <li><a href="contact.php">Nous contacter</a></li>
+                <li><a href="myaccount.php">Mon compte</a></li>
             </ul>
         </nav>
         <div class="titles">
-            <h1>Inscription</h1>
+            <h1>Mon Espace</h1>
+            <h2>Ici vous pouvez changer votre mot de passe ou mail</h2>
         </div>
     </header>
-    <div class="login">
-        <h2>Veuillez entrer vos informations : </h2>
-        <input type="text" placeholder="Email" />
-        <input type="text" placeholder="Pseudo" />
-        <input type="text" placeholder="Mot de passe" />
-        <input type="text" placeholder="Confirmez le mot de passe" />
-        <input type="button" value="Inscription" />
-    </div>
+
+    <section id="formulaire">
+
+        <form action="">
+            <p>monmail@gmail.com</p>
+            <label for="mail">Nouvelle adresse mail</label>
+            <input type="text" name="mail" id="" class="champs">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="" class="champs">
+            <label for="confirm-password">Confirmer</label>
+            <input type="password" name="confirm-password" id="" class="champs">
+            <input type="submit" value="Envoyer">
+        </form>
+        <img src="assets/images/game-controller-gamepad-svgrepo-com.svg" alt="game controller" id="game-controller">
+        <form action="">
+            <label for="old-password">Ancien password</label>
+            <input type="password" name="old-password" id="" class="champs">
+            <label for="password">Nouveau password</label>
+            <input type="password" name="password" id="" class="champs">
+            <label for="confirm-password">Confirmer</label>
+            <input type="password" name="confirm-password" id="" class="champs">
+            <input type="submit" value="Envoyer">
+        </form>
+
+    </section>
+
+
     <footer>
         <div class="informations">
             <p class="footer-title">Information</p>
@@ -74,6 +94,7 @@
             </ul>
         </div>
     </footer>
+
 </body>
 
 </html>
