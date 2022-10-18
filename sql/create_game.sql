@@ -1,1 +1,0 @@
-INSERT INTO game(game_name) VALUES ('The Power Of Memory')

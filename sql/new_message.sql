@@ -1,1 +1,0 @@
-INSERT INTO chat(game_id, player_id, message, message_time) VALUES ('1', '1', 'CC!', current_timestamp())

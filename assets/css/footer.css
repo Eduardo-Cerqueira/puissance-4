@@ -5,7 +5,6 @@ footer {
     background-color: #0D0A26;
     height: 500px;
     margin-top: 200px;
-    color: white;
 }
 
 .footer-title {
@@ -26,8 +25,6 @@ footer {
 
 .informations {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
     flex-direction: column;
 }
 
@@ -41,17 +38,15 @@ footer {
 }
 
 .media-links {
-    display: flex;
-    flex-direction: row;
+    margin-top: 10px;
 }
 
 .media-link {
     padding: 10px;
     background-color: rgb(229, 123, 18);
-    margin: 0 2px;
 }
 
-.media-link:hover {
+.media-link:hover{
     background-color: rgb(188, 103, 18);
 }
 
