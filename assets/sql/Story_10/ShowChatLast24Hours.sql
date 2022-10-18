@@ -6,7 +6,7 @@ SELECT
   game_time,
   CASE
     player_id
-    WHEN player_id = '1' THEN "true"
+    WHEN player_id = Users.id THEN "true"
     ELSE "false"
   END as estExpediteur
 FROM
