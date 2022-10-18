@@ -14,7 +14,7 @@ body {
 header {
 
     height: 70vh;
-    background-image: url("/puissance-4/assets/img/andreasbg.png");
+    background-image: url("../images/andreasbg.png");
     box-shadow: none;
     margin-bottom: 100px;
 }
@@ -85,7 +85,7 @@ form {
     justify-content: space-between;
     width: 45%;
     margin-top: 50px;
-    
+
 }
 
 input {
@@ -101,7 +101,7 @@ input {
 
 }
 
-form input[type = "textarea"] {
+form input[type="textarea"] {
 
     height: 150px;
 }
@@ -120,6 +120,6 @@ input::placeholder {
 }
 
 footer {
-margin-top: 100px;
+    margin-top: 100px;
 
 }
