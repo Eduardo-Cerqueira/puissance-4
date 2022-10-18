@@ -1,1 +1,0 @@
-UPDATE user SET password='4321' WHERE id=1
