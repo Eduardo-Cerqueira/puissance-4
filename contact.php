@@ -16,7 +16,7 @@
     <header>
         <?php
         include './assets/php/view/header.inc.php'
-        
+
         ?>
 
         <div class="titles">
@@ -51,12 +51,17 @@
             </div>
 
         </section>
+        <?php
+        if (isset($_GET["error"]) && $_GET["error"] == 1) {
+            var_dump("Veuillez verifier le formulaire !!! D: ");
+        }
+        ?>
 
-        <form action="">
+        <form action="./assets/php/includes/contact_traitement.php" method="post">
 
-            <input class="perso" type="text" placeholder="Nom" id="nom">
+            <input class="perso" type="text" placeholder="Nom" id="nom" required>
             <input class="perso" type="mail" placeholder="Mail" id="">
-            <input type="text" placeholder="Sujet" id="">
+            <input type="text" placeholder="Sujet" id="" required>
             <input type="textarea" placeholder="Message" id="">
             <input type="submit" value="Envoyer">
 
@@ -65,7 +70,7 @@
 
     </section>
 
-    <?php 
+    <?php
     include './assets/php/view/footer.inc.php';
     ?>
 
