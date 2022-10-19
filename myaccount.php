@@ -15,7 +15,6 @@
     <header id="myaccountheader">
         <?php
         include './assets/php/view/header.inc.php'
-
         ?>
         <div class="titles">
             <h1>Mon Espace</h1>
@@ -25,7 +24,7 @@
 
     <section id="formulaire">
 
-        <form action="">
+        <form action="" method="post"> <!-- // TODO mettre le chemin vers le myaccount_traitement.php dans le action-->
             <p>monmail@gmail.com</p>
             <label for="mail">Nouvelle adresse mail</label>
             <input type="text" name="mail" id="" class="champs">
