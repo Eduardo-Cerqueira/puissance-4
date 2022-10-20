@@ -1,5 +1,6 @@
 <?php
 class database
+
 {
     public $bdd;
 
@@ -18,3 +19,5 @@ class database
         }
     }
 }
+
+?>

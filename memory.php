@@ -907,7 +907,7 @@
             </td>
         </tr>
     </table>
-    <section>z</section>
+    
 
     <?php 
     include './assets/php/view/footer.inc.php';

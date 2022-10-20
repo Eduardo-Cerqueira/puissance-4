@@ -1,23 +1,22 @@
 <?php
+include 'database.inc.php';
 
 class dynamique{
-
+    
+    
     function nbuser(){
-
-       require('database.inc.php');
-
+        
         $database = new database;
         $myBdd = $database->connectBdd();
 
         $query = "SELECT COUNT(id) FROM Users";
         $req = $myBdd->prepare($query);
         $nbuser = $req->execute();
+        unset($database);
         return $nbuser; 
     }
 
     function bestscore(){
-
-       require('database.inc.php');
 
         $database = new database;
         $myBdd = $database->connectBdd();
@@ -25,12 +24,11 @@ class dynamique{
         $query = "SELECT MIN(score) FROM Score";
         $req = $myBdd->prepare($query);
         $bestscore = $req->execute();
+        unset($database);
         return $bestscore; 
     }
 
     function nbpartie(){
-
-       require('database.inc.php');
 
         $database = new database;
         $myBdd = $database->connectBdd();
@@ -38,19 +36,19 @@ class dynamique{
         $query = "SELECT COUNT(id) FROM Score";
         $req = $myBdd->prepare($query);
         $nbpartie = $req->execute();
+        unset($database);
         return $nbpartie; 
     }
 
     function usercon(){
 
-       require('database.inc.php');
-
         $database = new database;
         $myBdd = $database->connectBdd();
 
-        $query = "SELECT COUNT(connected) FROM Users WHERE connected == true";
+        $query = "SELECT COUNT(connected) FROM Users WHERE connected = true";
         $req = $myBdd->prepare($query);
         $usercon = $req->execute();
+        unset($database);
         return $usercon; 
     }
 

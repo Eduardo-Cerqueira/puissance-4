@@ -83,7 +83,7 @@
 
         <section class="stat">
             <div class="statistique" id="partie">
-                <p class="stat-number"><?= $dynamique->nbpartie(); ?></p>
+                <p class="stat-number"><?php echo $dynamique->nbpartie(); ?></p>
                 <p class="stat-desc"> Parties jouées</p>
             </div>
             <div class="statistique" id="joueurs1">

@@ -25,8 +25,10 @@ class myaccount_traitement
         $myBdd = $database->connectBdd();
 
         $mdp = $_POST['password']; // ! Correspond à Nouveau mot de passe
-        $newMdp = $_POST['confirm-password']; 
-        $oldMdp = $_POST['old-password']; // ** hash le mdp pour le chercher dans la BDD
+        $newMdp = $_POST['confirm-password'];
+        $oldMdp = $_POST['old-password']; 
+
+        var_dump(hash('sha256',$mdp)); //test hier
       
         if($this->verifyPasswordAndMail($mdp,$newMdp,$mail) == true){
             $query = "UPDATE Users SET password = " . "'" . $mdp . "' WHERE password =". "'" . $oldMdp  . "'" . "AND email  = " . "'" . $mail . "'";  // **  penser a stoker l'adresse mail du user a la connection pour vérifié le changement de mdp
@@ -61,7 +63,6 @@ class myaccount_traitement
     }
 
 }
-
 $test = new myaccount_traitement();
 $test->VerifyOldmdp();
 var_dump("traitement");
