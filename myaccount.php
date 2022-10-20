@@ -22,9 +22,16 @@
         </div>
     </header>
 
+    <?php 
+    
+    if(isset($_GET["error"]) && $_GET["error"] == 1 ){
+        var_dump("Ancien mot de passe incorrect !!! D: ");
+    }
+    
+    ?>
     <section id="formulaire">
 
-        <form action="" method="post"> <!-- // TODO mettre le chemin vers le myaccount_traitement.php dans le action-->
+        <form action="./assets/php/includes/myaccount_traitement.php" method="post"> <!-- // TODO mettre le chemin vers le myaccount_traitement.php dans le action-->
             <p>monmail@gmail.com</p>
             <label for="mail">Nouvelle adresse mail</label>
             <input type="text" name="mail" id="" class="champs">
@@ -35,7 +42,7 @@
             <input type="submit" value="Envoyer">
         </form>
         <img src="assets/images/game-controller-gamepad-svgrepo-com.svg" alt="game controller" id="game-controller">
-        <form action="">
+        <form action="./assets/php/includes/myaccount_traitement.php" method="post">
             <label for="old-password">Ancien password</label>
             <input type="password" name="old-password" id="" class="champs">
             <label for="password">Nouveau password</label>
