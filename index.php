@@ -16,7 +16,10 @@
 
     <header>
         <?php
-        include './assets/php/view/header.inc.php'
+        include './assets/php/view/header.inc.php';
+        include './assets/php/includes/dynamique.php';
+        $dynamique = new dynamique;
+        
 
         ?>
         <div class="titles">
@@ -80,19 +83,19 @@
 
         <section class="stat">
             <div class="statistique" id="partie">
-                <p class="stat-number">310</p>
+                <p class="stat-number"><?= $dynamique->nbpartie(); ?></p>
                 <p class="stat-desc"> Parties jouées</p>
             </div>
             <div class="statistique" id="joueurs1">
-                <p class="stat-number">1020 </p>
-                <p class="stat-desc"> joueurs </p>
+                <p class="stat-number"><?= $dynamique->usercon(); ?></p>
+                <p class="stat-desc"> joueurs connectés </p>
             </div>
             <div class="statistique" id="time">
-                <p class="stat-number">10 sec </p>
+                <p class="stat-number"><?= $dynamique->bestscore(); ?> </p>
                 <p class="stat-desc">Temps record</p>
             </div>
             <div class="statistique" id="joueurs">
-                <p class="stat-number">21300 </p>
+                <p class="stat-number"><?= $dynamique->nbuser(); ?></p>
                 <p class="stat-desc">joueurs inscrits</p>
             </div>
         </section>
