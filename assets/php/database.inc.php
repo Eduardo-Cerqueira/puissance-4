@@ -26,8 +26,8 @@ class Request {
   public function getmybdd(){
     try {
       if ($this->bdd ===null){
-          $this->bdd = new PDO($this->type.':host='.$this->host.';dbname='.$this->dbname.'',$this->username, $this->password);
-      }
+        $this->bdd = new PDO($this->type.":host=".$this->host.";dbname=".$this->dbname ,$this->username,$this->$password);
+      }                   
     } catch (PDOException $e) {
       print "Erreur ! Connection à la base de donné impossible".$e->getMessage()." <br/>";
       die();
@@ -60,27 +60,25 @@ class Request {
 
   public function register() {
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        
-        echo $_POST["mail"];
-        $password = $_POST["mdp"];
         $mail = $_POST["mail"];
+        $password = $_POST["pass"];
+        $confirmPassword = $_POST["confirmpass"];
         $username = $_POST["username"];
         if (!isset($name)){'veillez mettre un nom';}
         $good_user = 0;
         if (filter_var($mail, FILTER_VALIDATE_EMAIL) ? "true" : "false" == "true"){$good_user+=1;}
         if (strlen($username)>3/*à changer*/){$good_user+=1;}
-        if (strlen($password)>2/*à changer*/){$good_user+=1;}
+        if (strlen($password)>7/*à changer*/){$good_user+=1;}
         if (preg_match('`[0-9]`',$password)>0){$good_user+=1;}
         if (preg_match('`[A-Z]`',$password)>0){$good_user+=1;}
         if (preg_match('/[^a-zA-Z\d]/',$password)>0){$good_user+=1;}
-        if ($good_user >= 5) {
-        $query = 'INSERT INTO user (mail, username, password) VALUES ("quentin.y@email.com", "quentin dupont","AZERT1245*")';
-        $bdd = getmybdd();
-        $req = $bdd->prepare($query);
+        echo $good_user;
+        if ($good_user == 6 && $password == $confirmPassword) {
+        echo ('test');
+        $query = 'INSERT INTO user (mail, username, password) VALUES ("'.$mail.'", "'.$username.'","'.$password.'")';
+        $req = $this->bdd->prepare($query);
         $req->execute();
-        echo 'cassé';
         }
-        return $_POST["mail"];
     }
   }
 }

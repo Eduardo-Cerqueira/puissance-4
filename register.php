@@ -13,7 +13,7 @@
 <?php
 
 require "assets/php/database.inc.php"; 
-$bdd = new Request("mysql","localhost","puissance4","root","");
+$bdd = new Request("mysql","127.0.0.1","puissance4","root","");
 ?>
 <body>
     <header id="myaccountheader">
@@ -35,12 +35,32 @@ $bdd = new Request("mysql","localhost","puissance4","root","");
     <div class="login">
         <form action="register.php"method="post">
             <h2>Veuillez entrer vos informations : </h2>
+            <style type="text/css">
+                .error{ color: red; }
+                .success{ color: green; }
+            </style>
+            <p>
+                <label for="inputUsername">Username:<sup>*</sup></label>
+                <input type="text" name="username" id="inputUsername" value="<?php echo $username; ?>">
+                <span class="error"><?php echo $username; ?></span>
+            </p>
             <p>
                 <label for="inputMail">Email:<sup>*</sup></label>
-                <input type="text" name="mail" id="inputMail" value="<?php echo $email; ?>">
-                <span class="error"><?php echo $emailErr; ?></span>
+                <input type="text" name="mail" id="inputMail" value="<?php echo $mail; ?>">
+                <span class="error"><?php echo $mailErr; ?></span>
+            </p>
+            <p>
+                <label for="inputPass">Mot de passe:<sup>*</sup></label>
+                <input type="text" name="pass" id="inputPass" value="<?php echo $password; ?>">
+                <span class="error"><?php echo $passwordErr; ?></span>
+            </p>
+            <p>
+                <label for="inputConfirmPass">Confirmer le mot de passe:<sup>*</sup></label>
+                <input type="text" name="confirmpass" id="inputConfirmPass" value="<?php echo $confirm; ?>">
+                <span class="error"><?php echo $confirmErr; ?></span>
             </p>
             <?php 
+            $bdd->getmybdd();
             $bdd->register();
             ?>
             <input type="submit" value="Send">
