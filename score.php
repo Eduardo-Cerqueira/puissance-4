@@ -33,42 +33,7 @@
                     <th>Score du joueur</th>
                     <th>Date et heure de la partie</th>
                 </tr>
-                <tr>
-                    <td>Game1</td>
-                    <td>Pseudo</td>
-                    <td>Level 2</td>
-                    <td>10</td>
-                    <td>06/10/2022 | 15:00:00</td>
-                </tr>
-                <tr>
-                    <td>Game2
-                    </td>
-                    <td>Pseudo</td>
-                    <td>Level 2</td>
-                    <td>10</td>
-                    <td>06/10/2022 | 15:00:00</td>
-                </tr>
-                <tr>
-                    <td>Game3</td>
-                    <td>Pseudo</td>
-                    <td>Level 2</td>
-                    <td>12</td>
-                    <td>06/10/2022 | 15:00:00</td>
-                </tr>
-                <tr>
-                    <td>Game4</td>
-                    <td>Pseudo</td>
-                    <td>Level 2</td>
-                    <td>11</td>
-                    <td>06/10/2022 | 15:00:00</td>
-                </tr>
-                <tr>
-                    <td>Game5</td>
-                    <td>Pseudo</td>
-                    <td>Level 1</td>
-                    <td>19</td>
-                    <td>06/10/2022 | 15:00:00</td>
-                </tr>
+                <?php include 'assets/php/score_.php' ?>
             </table>
         </div>
     </div>

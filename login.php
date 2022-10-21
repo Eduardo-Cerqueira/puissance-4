@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,8 +15,7 @@
 <body>
     <header id="myaccountheader">
         <?php
-        include './assets/php/view/header.inc.php'
-
+        include 'assets/php/view/header.inc.php';
         ?>
         <div class="titles">
             <h1>Connexion</h1>
@@ -23,20 +23,20 @@
     </header>
     <div class="login">
         <h2>Veuillez entrer vos informations : </h2>
-
-        <form action="" method="post">
-
-            <input type="mail" name="mail" placeholder="Email" />
-    
-            <input type="password" name="password" placeholder="Mot de passe" />
-    
-            <input type="button" value="Connexion" />
-
+        <?php include 'assets/php/login_.php'; loginuser();?>
+        <form class = "form-signin" role = "form" action = '<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>' method = "post">
+            
+            <input type = "text" class = "form-control" name = "username" placeholder = "Username / Email" required autofocus />
+            <input type = "password" class = "form-control" name = "password" placeholder = "Password" required>
+            <button class = "button" type = "submit" name = "login">Login</button>
+        </form>
+        <form class = "form-signin" role = "form" action = "logout.php" method = "post">
+        <button type="submit" name = "logout">Logout</button>
         </form>
     </div>
 
     <?php 
-    include './assets/php/view/footer.inc.php';
+    include 'assets/php/view/footer.inc.php';
     ?>
 
 </body>
