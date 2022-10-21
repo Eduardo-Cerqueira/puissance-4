@@ -18,10 +18,10 @@ function verifyMessage($msg){
 
 function verifyAll(){
     if(verifyMessage($_POST['message']) && verifyMail($_POST['mail'])){
-        header("Location: http://127.0.0.1:12001/contact.php");
+        header("Location: http://127.0.0.1:12002/contact.php");
     }
     else{
-        header("Location: http://127.0.0.1:12001/contact.php?error=1");
+        header("Location: http://127.0.0.1:12002/contact.php?error=1");
     }
 }
 

@@ -22,22 +22,25 @@
         </div>
     </header>
 
-    <?php 
-    
-    if(isset($_GET["error"]) && $_GET["error"] == 1 ){
-        var_dump("Ancien mot de passe incorrect !!! D: ");
-    }
-    
+    <?php
+
+    if (isset($_GET["error"]) && $_GET["error"] == 1) {
+        echo("Ancien mot de passe incorrect !!! D: ");
+    } else if (isset($_GET["success"]) && $_GET["success"] == 1)
+        echo("Mot de passe changé !!");
+
     ?>
     <section id="formulaire">
 
-        <form action="./assets/php/includes/myaccount_traitement.php" method="post"> <!-- // TODO mettre le chemin vers le myaccount_traitement.php dans le action-->
+        <form action="./assets/php/includes/myaccount_traitement.php" method="post">
+            <!-- // TODO mettre le chemin vers le myaccount_traitement.php dans le action-->
             <p>monmail@gmail.com</p>
             <label for="mail">Nouvelle adresse mail</label>
             <input type="text" name="mail" id="" class="champs">
             <label for="password">Password</label>
             <input type="password" name="password" id="" class="champs">
-            <label for="confirm-password">Confirmer</label>
+
+            <label for="confirm-password">Confirm Password</label>
             <input type="password" name="confirm-password" id="" class="champs">
             <input type="submit" value="Envoyer">
         </form>

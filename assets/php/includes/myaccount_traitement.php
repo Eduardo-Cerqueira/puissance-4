@@ -19,19 +19,25 @@ class myaccount_traitement
 
     function ChangeMdp()
     {
-        require('database.inc.php');
+        $mail = 'benyouyou@gmail.com'; // ! Adresse brut pour test
+
         $database = new database;
         $myBdd = $database->connectBdd();
 
         $mdp = $_POST['password']; // ! Correspond à Nouveau mot de passe
-        $newMdp = $_POST['confirm-password']; 
-        $oldMdp = $_POST['old-password']; // ** hash le mdp pour le chercher dans la BDD
+        $newMdp = $_POST['confirm-password'];
+        $oldMdp = $_POST['old-password']; 
+
+        var_dump(hash('sha256',$mdp)); //test hier
       
         if($this->verifyPasswordAndMail($mdp,$newMdp,$mail) == true){
-            $query = "UPDATE Users SET mdp = " . "'" . $mdp . "' WHERE mdp = " . $oldMdp . " AND email  = " . $mail;  // **  penser a stoker l'adresse mail du user a la connection pour vérifié le changement de mdp
+            $query = "UPDATE Users SET password = " . "'" . $mdp . "' WHERE password =". "'" . $oldMdp  . "'" . "AND email  = " . "'" . $mail . "'";  // **  penser a stoker l'adresse mail du user a la connection pour vérifié le changement de mdp
             $req = $myBdd->prepare($query);
             $req->execute();
-            header("Location: http://127.0.0.1:12001/myaccount.php?success=1");
+            header("Location: http://127.0.0.1:12002/myaccount.php?success=1 ");
+        }
+        else{
+            var_dump("shit");
         }
     }
 
@@ -41,25 +47,22 @@ class myaccount_traitement
         $database = new database;
         $myBdd = $database->connectBdd();
 
-        $query = "SELECT INTO mdp FROM Users WHERE email = ".  $mail;
+        $mail = 'benyouyou@gmail.com'; // ! Adresse brut pour test
+
+        $query = "SELECT password FROM Users WHERE email = " . "'" . $mail . "'";
         $req = $myBdd->prepare($query);
         $hashMdp = $req->execute();
 
+
         $oldMdp = $_POST['old-password'];
 
-        if ($hashMdp == hash('sha256',$oldMdp)) {
-            exit();
-        } else {
+        if ($hashMdp != hash('sha256',$oldMdp)) {
             header("Location: http://127.0.0.1:12001/myaccount.php?error=1");
         }
-
-
-
+        else{$this->ChangeMdp();}
     }
 
 }
-
 $test = new myaccount_traitement();
 $test->VerifyOldmdp();
-$test->ChangeMdp();
 var_dump("traitement");
