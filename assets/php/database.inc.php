@@ -27,9 +27,6 @@ class Request {
     try {
       if ($this->bdd ===null){
           $this->bdd = new PDO($this->type.':host='.$this->host.';dbname='.$this->dbname.'',$this->username, $this->password);
-          foreach($this->bdd->query('SELECT * from user') as $row) {
-            print_r($row);
-          }
       }
     } catch (PDOException $e) {
       print "Erreur ! Connection à la base de donné impossible".$e->getMessage()." <br/>";
@@ -61,15 +58,30 @@ class Request {
     return true;
   }
 
-
-
-
-  public function inscription($tableBDD,$columnBDD,$password,$value){
-    $query = "'"."SELECT * FROM ".$tableBDD."'";
-    var_dump($query); //taille mdp
-    $req = $this->bdd->query($query);
-    print_r($req);
-    return $req;
+  public function register() {
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        
+        echo $_POST["mail"];
+        $password = $_POST["mdp"];
+        $mail = $_POST["mail"];
+        $username = $_POST["username"];
+        if (!isset($name)){'veillez mettre un nom';}
+        $good_user = 0;
+        if (filter_var($mail, FILTER_VALIDATE_EMAIL) ? "true" : "false" == "true"){$good_user+=1;}
+        if (strlen($username)>3/*à changer*/){$good_user+=1;}
+        if (strlen($password)>2/*à changer*/){$good_user+=1;}
+        if (preg_match('`[0-9]`',$password)>0){$good_user+=1;}
+        if (preg_match('`[A-Z]`',$password)>0){$good_user+=1;}
+        if (preg_match('/[^a-zA-Z\d]/',$password)>0){$good_user+=1;}
+        if ($good_user >= 5) {
+        $query = 'INSERT INTO user (mail, username, password) VALUES ("quentin.y@email.com", "quentin dupont","AZERT1245*")';
+        $bdd = getmybdd();
+        $req = $bdd->prepare($query);
+        $req->execute();
+        echo 'cassé';
+        }
+        return $_POST["mail"];
+    }
   }
 }
 
@@ -80,20 +92,3 @@ class Request {
 //Le pseudo doit faire au minium 4 caractères
 
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <?php
-        $test = new Request("mysql", "localhost", "puissance4", "root", "");
-        $test->getmybdd();
-        echo $test->inscription("user", "mail","1234", "1");
-    ?>
-</body>
-</html>
