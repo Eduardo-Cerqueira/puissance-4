@@ -19,12 +19,14 @@ if (isset($_POST['login']) && !empty($_POST['username']) && strlen($password) >=
    $dbusername = getUserAllInfo($username_email,$password,1);
    $dbpassword = getUserAllInfo($username_email,$password,2);
    $dbemail = getUserAllInfo($username_email,$password,3);
+   $player_id = getUserAllInfo($username_email,$password,0)
    
    if ($hashpassword == $dbpassword) {
       $_SESSION['valid'] = true;
       $_SESSION['timeout'] = time();
       $_SESSION['user_id'] = $dbusername;
       $_SESSION['email'] = $dbemail;
+      $_SESSION['player_id'] = $player_id
 
       $pdo = new PDO("mysql:host=localhost;dbname=puissance4" ,"root", "");
       $query = 'UPDATE Users SET last_connection = NOW() WHERE username = '."'".$dbusername."'";
