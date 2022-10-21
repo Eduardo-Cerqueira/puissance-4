@@ -32,7 +32,7 @@
     ?>
     <section id="formulaire">
 
-        <form action="./assets/php/includes/myaccount_traitement.php" method="post">
+        <form action="./assets/php/includes/myaccount_traitement2.php" method="post">
             <!-- // TODO mettre le chemin vers le myaccount_traitement.php dans le action-->
             <p>monmail@gmail.com</p>
             <label for="mail">Nouvelle adresse mail</label>
