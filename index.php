@@ -166,45 +166,12 @@
             <p>Chat général</p>
         </div>
         <div class="chat-body">
-            <div class="user-msg">
-                <p class="user-name" id="me">Moi</p>
-                <p class="msg user" id="hello">Hello</p>
-                <p class="date-msg">Aujourd'hui à 14h32</p>
-            </div>
-            <div class="sav-msg">
-                <p class="sav-name">Arthur</p>
-                <p class="msg sav">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet iure fugit
-                    exercitationem placeat voluptates ditate.</p>
-                <p class="date-msg">Aujourd'hui à 14h32</p>
-            </div>
-            <div class="sav-msg">
-                <p class="sav-name">Arthur</p>
-                <p class="msg sav">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet iure fugit
-                    exercitationem placeat voluptates ditate.</p>
-                <p class="date-msg">Aujourd'hui à 14h32</p>
-            </div>
-            <div class="user-msg">
-                <p class="user-name">Moi</p>
-                <p class="msg user">Comment ça va ?</p>
-                <p class="date-msg">Aujourd'hui à 14h33</p>
-            </div>
-            <div class="sav-msg">
-                <p class="sav-name">Arthur</p>
-                <p class="msg sav">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet iure fugit
-                    exercitationem placeat voluptates ditate.</p>
-                <p class="date-msg">Aujourd'hui à 14h32</p>
-            </div>
-            <div class="sav-msg">
-                <p class="sav-name">Arthur</p>
-                <p class="msg sav">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet iure fugit
-                    exercitationem placeat voluptates ditate.</p>
-                <p class="date-msg">Aujourd'hui à 14h32</p>
-            </div>
+            <?php include 'assets/php/chat_.php'; ?>
         </div>
         <div class="chat-footer">
-            <form action="">
-                <input type="text" placeholder="Rentrer votre message ...">
-                <input type="submit" value="Envoyer">
+            <form action="<?php  ?>">
+                <input type="text" name="message" placeholder="Rentrer votre message ...">
+                <input type="submit" name="submit" value="Envoyer">
             </form>
         </div>
     </section>
