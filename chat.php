@@ -10,10 +10,9 @@ if (isset($_SESSION['valid'])) {
             <?php include 'assets/php/chat_.php'; ?>
         </div>
         <div class="chat-footer">
-        <?php addMessage(); ?>
             <form class = "form-signin" role = "form" method = "post">
-                <input type="text" name="message" placeholder="Rentrer votre message ...">
-                <input type="submit" name="submit" value="Envoyer">
+                <input type="text" name="message" placeholder="Rentrer votre message ..." >
+                <button type="submit" name = "submit">Envoyer</button>
             </form>
         </div>
     </section>
