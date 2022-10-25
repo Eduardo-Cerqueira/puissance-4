@@ -30,7 +30,7 @@
             <input type = "password" class = "form-control" name = "password" placeholder = "Password" required>
             <button class = "button" type = "submit" name = "login">Login</button>
         </form>
-        <form class = "form-signin" role = "form" action = "logout.php" method = "post">
+        <form class = "form-signin" role = "form" action = "assets/php/logout.php" method = "post">
         <button type="submit" name = "logout">Logout</button>
         </form>
     </div>
