@@ -25,8 +25,11 @@
         <h2>Veuillez entrer vos informations : </h2>
         <input type="text" placeholder="Email" />
         <input type="text" placeholder="Pseudo" />
-        <input type="text" placeholder="Mot de passe" />
-        <input type="text" placeholder="Confirmez le mot de passe" />
+        <input type="password" placeholder="Mot de passe" />
+        
+        <progress id="file" max="100" value="70"> 70% </progress>
+        
+        <input type="password" placeholder="Confirmez le mot de passe" />
         <input type="button" value="Inscription" />
     </div>
 
