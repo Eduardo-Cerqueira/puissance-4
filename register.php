@@ -3,6 +3,7 @@
 <html lang="en">
 
 <head>
+    <script src="assets/register.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,8 +14,8 @@
 </head>
 <?php
 
-require "assets/php/includes/database.inc.php"; 
-require "assets/php/register_.php"; 
+require "./assets/php/includes/database.inc.php"; 
+require "./assets/php/register_.php"; 
 $bdd = new database();
 ?>
 <body>
@@ -41,6 +42,7 @@ $bdd = new database();
                 .error{ color: red; }
                 .success{ color: green; }
             </style>
+            <div id="div1" class="div" style="background-color: black;" oninput="javascript:validate()"></div>
             <p>
                 <label for="inputUsername">Username:<sup>*</sup></label>
                 <input type="text" name="username" id="inputUsername" value="<?php echo $username; ?>">
@@ -52,9 +54,9 @@ $bdd = new database();
                 <span class="error"><?php echo $mailErr; ?></span>
             </p>
             <p>
-                <label for="inputPass">Mot de passe:<sup>*</sup></label>
+                <label id="mdp" for="inputPass">Mot de passe:<sup>*</sup></label>
                 <input type="text" name="pass" id="inputPass" value="<?php echo $password; ?>">
-                <span class="error"><?php echo $passwordErr; ?></span>
+                <span id="msg" class="error"><?php echo $passwordErr; ?></span>
             </p>
             <p>
                 <label for="inputConfirmPass">Confirmer le mot de passe:<sup>*</sup></label>
@@ -88,11 +90,11 @@ $bdd = new database();
             </div>
 
             <div class="media-links">
-                <a class="media-link" href="#"><img src="assets/images/icons8-facebook-nouveau.svg" alt=""></a>
-                <a class="media-link" href="#"> <img src="assets/images/icons8-twitter.svg" alt=""></a>
-                <a class="media-link" href="#"> <img src="assets/images/icons8-logo-google.svg" alt=""></a>
-                <a class="media-link" href="#"><img src="assets/images/pinterest-2.svg" alt=""></a>
-                <a class="media-link" href="#"> <img src="assets/images/icons8-instagram.svg" alt=""></a>
+                <a class="media-link" href="#"><img src="./assets/images/icons8-facebook-nouveau.svg" alt=""></a>
+                <a class="media-link" href="#"> <img src="./assets/images/icons8-twitter.svg" alt=""></a>
+                <a class="media-link" href="#"> <img src="./assets/images/icons8-logo-google.svg" alt=""></a>
+                <a class="media-link" href="#"><img src="./assets/images/pinterest-2.svg" alt=""></a>
+                <a class="media-link" href="#"> <img src="./assets/images/icons8-instagram.svg" alt=""></a>
             </div>
 
             <p id="copyright">© 2022 Coding Factory Made with ❤️</p>
