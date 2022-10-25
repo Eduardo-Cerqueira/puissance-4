@@ -26,7 +26,7 @@
         <?php include 'assets/php/login_.php'; loginuser();?>
         <form class = "form-signin" role = "form" action = '<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>' method = "post">
             
-            <input type = "text" class = "form-control" name = "username" placeholder = "Username / Email" required autofocus />
+            <input type = "text" class = "form-control" name = "username" placeholder = "Username / Email" required/>
             <input type = "password" class = "form-control" name = "password" placeholder = "Password" required>
             <button class = "button" type = "submit" name = "login">Login</button>
         </form>

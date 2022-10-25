@@ -13,9 +13,7 @@ function register($bdd) {
             if (preg_match('`[0-9]`',$password)>0){$good_user+=1;}
             if (preg_match('`[A-Z]`',$password)>0){$good_user+=1;}
             if (preg_match('/[^a-zA-Z\d]/',$password)>0){$good_user+=1;}
-            echo $good_user;
             if ($good_user == 6 && $password == $confirmPassword) {
-            echo ('test');
             $query = 'INSERT INTO user (mail, username, password) VALUES ("'.$mail.'", "'.$username.'",SHA2("'.$password.'",256))';
             $req = $bdd->prepare($query);
             $req->execute();

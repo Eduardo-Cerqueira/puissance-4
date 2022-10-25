@@ -8,5 +8,6 @@
         <li><a href="contact.php">Nous contacter</a></li>
         <li><a href="myaccount.php">Mon compte</a></li>
         <li><a href="login.php">Log In</a></li>
+        <li><a href="register.php">Register</a></li>
     </ul>
 </nav>
