@@ -20,13 +20,11 @@
         include './assets/php/view/header.inc.php';
         include './assets/php/includes/dynamique.php';
         $dynamique = new dynamique;
-        
-
         ?>
         <div class="titles">
             <h1>Bienvenue dans <br> notre studio !</h1>
             <h2>Venez challenger les cerveaux les plus agiles !</h2>
-            <input type="button" value="JOUER !">
+            <?php include 'assets/php/index_.php'; ?>
         </div>
     </header>
     <section id="paragraphs">

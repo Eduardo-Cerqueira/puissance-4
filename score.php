@@ -20,7 +20,7 @@ isLoggedIn();
         <?php
         include './assets/php/view/header.inc.php'
 
-        ?>gi
+        ?>
         <div class="titles">
             <h1>Score</h1>
             <h2>Venez challenger les cerveaux les plus agiles !</h2>
@@ -28,18 +28,16 @@ isLoggedIn();
         </div>
     </header>
     <div class="stats">
-        <div class="card">
-            <table id="table">
-                <tr>
-                    <th>Nom du jeu</th>
-                    <th>Pseudo du joueur</th>
-                    <th>Niveau de difficulté de la partie jouée</th>
-                    <th>Score du joueur</th>
-                    <th>Date et heure de la partie</th>
-                </tr>
-                <?php include 'assets/php/score_.php' ?>
-            </table>
-        </div>
+        <table id="table">
+            <tr>
+                <th>Nom du jeu</th>
+                <th>Pseudo du joueur</th>
+                <th>Niveau de difficulté de la partie jouée</th>
+                <th>Score du joueur</th>
+                <th>Date et heure de la partie</th>
+            </tr>
+            <?php include 'assets/php/score_.php' ?>
+        </table>
     </div>
 
     <?php 
