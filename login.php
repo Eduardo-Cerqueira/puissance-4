@@ -24,15 +24,14 @@
     <div class="login">
         <h2>Veuillez entrer vos informations : </h2>
         <?php include 'assets/php/login_.php'; loginuser();?>
-        <form class = "form-signin" role = "form" action = '<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>' method = "post">
-            
-            <input type = "text" class = "form-control" name = "username" placeholder = "Username / Email" required/>
-            <input type = "password" class = "form-control" name = "password" placeholder = "Password" required>
-            <button class = "button" type = "submit" name = "login">Login</button>
+        <form class="form-signin" role="form" action='<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>' method="post">
+            <input type="text" class="form-control" name="username" placeholder="Username / Email" required />
+            <input type="password" class="form-control" name="password" placeholder="Password" required><br>
+            <button class="button" type="submit" name="login">Login</button>
         </form>
-        <form class = "form-signin" role = "form" action = "assets/php/logout.php" method = "post">
-        <button  class = "button" type="submit" name = "logout">Logout</button>
-        </form>
+        <form class="form-signin" role="form" action="assets/php/logout.php" method="post">
+                <button class="button" type="submit" name="logout">Logout</button>
+            </form>
     </div>
 
     <?php 

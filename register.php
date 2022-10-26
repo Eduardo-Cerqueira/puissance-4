@@ -1,4 +1,3 @@
-
 <?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,12 +11,9 @@
     <link rel="stylesheet" href="assets/css/register.css">
     <link rel="stylesheet" href="assets/css/footer.css">
 </head>
-<?php
 
-require "assets/php/includes/database.inc.php"; 
-require "assets/php/register_.php"; 
-$bdd = new database();
-?>
+<?php require "assets/php/includes/database.inc.php"; require "assets/php/register_.php"; $bdd = new database(); ?>
+
 <body>
     <header id="myaccountheader">
         <?php include './assets/php/view/header.inc.php' ?>
@@ -26,11 +22,16 @@ $bdd = new database();
         </div>
     </header>
     <div class="login">
-        <form action="register.php"method="post">
+        <form action="register.php" method="post">
             <h2>Veuillez entrer vos informations : </h2>
             <style type="text/css">
-                .error{ color: red; }
-                .success{ color: green; }
+                .error {
+                    color: red;
+                }
+
+                .success {
+                    color: green;
+                }
             </style>
             <p>
                 <label for="inputUsername">Username:<sup>*</sup></label>

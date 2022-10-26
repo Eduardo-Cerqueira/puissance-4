@@ -24,7 +24,6 @@ isLoggedIn();
 
         <div class="titles">
             <h1>Memory</h1>
-            <button onclick="<script> src='assets/js/score.js' myFunction()</script>">Try it</button>
         </div>
     </header>
 
@@ -71,7 +70,7 @@ isLoggedIn();
     include './assets/php/view/footer.inc.php';
     ?>
 
-    <script src="/assets/js/script.js"></script>
+    <script src="assets/js/script.js"></script>
 
 </body>
 

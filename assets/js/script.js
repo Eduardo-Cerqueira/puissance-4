@@ -1,4 +1,4 @@
-var choix = [6, 8, 12, 20];
+/* var choix = [6, 8, 12, 20]; */
 var themes = document.getElementById('theme')
 var mode = document.getElementById('menu')
 var difficulty, theme, griltete;
@@ -64,16 +64,16 @@ mode.addEventListener('change', function () {
     difficulty = mode.value;
 
     if (difficulty == 'easy') {
-        difficulty = 0   
+        difficulty = 6   
     }
     else if (difficulty == 'medium') {
-        difficulty = 1  
+        difficulty = 8  
     }
     else if (difficulty == 'hard') {
-        difficulty = 2   
+        difficulty = 12   
     }
     else if (difficulty == 'impossible') {
-        difficulty = 3  
+        difficulty = 20  
     }
 })
 
@@ -85,6 +85,7 @@ button.addEventListener('click', function () {
     if (griltete != undefined) {
         jeu.removeChild(griltete);
     }
+
     if (difficulty == undefined || theme == undefined) {
 
         var para = document.createElement("p")
@@ -93,14 +94,15 @@ button.addEventListener('click', function () {
         gril.appendChild(para)
         
     } else {
-        
+
+  
         chronoStart();
         griltete = document.createElement('table')
         var grilcorp = document.createElement('tbody')
 
-        for (let index = 0; index < choix[difficulty]; index++) {
+        for (let index = 0; index < difficulty; index++) {
             var row = document.createElement('tr')
-            for (let i = 0; i < choix[difficulty]; i++) {
+            for (let i = 0; i < difficulty; i++) {
                 var imgSrc = './assets/images/themes/' + themes.value + '/' + themes.value + ' 124.jpg'
                 var cas = document.createElement("td")
                 var img = document.createElement('img')
