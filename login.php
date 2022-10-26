@@ -30,8 +30,8 @@
             <button class="button" type="submit" name="login">Login</button>
         </form>
         <form class="form-signin" role="form" action="assets/php/logout.php" method="post">
-                <button class="button" type="submit" name="logout">Logout</button>
-            </form>
+            <button class="button" type="submit" name="logout">Logout</button>
+        </form>
     </div>
 
     <?php 

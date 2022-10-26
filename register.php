@@ -34,20 +34,16 @@
                 }
             </style>
             <p>
-                <label for="inputUsername">Username:<sup>*</sup></label>
-                <input type="text" name="username" id="inputUsername">
+                <input type="text" name="username" id="inputUsername" placeholder="Username">
             </p>
             <p>
-                <label for="inputMail">Email:<sup>*</sup></label>
-                <input type="text" name="mail" id="inputMail">
+                <input type="text" name="mail" id="inputMail" placeholder="Email">
             </p>
             <p>
-                <label for="inputPass">Mot de passe:<sup>*</sup></label>
-                <input type="text" name="pass" id="inputPass">
+                <input type="text" name="pass" id="inputPass" placeholder="Mot de passe">
             </p>
             <p>
-                <label for="inputConfirmPass">Confirmer le mot de passe:<sup>*</sup></label>
-                <input type="text" name="confirmpass" id="inputConfirmPass">
+                <input type="text" name="confirmpass" id="inputConfirmPass" placeholder="Confirmer le mot de passe">
             </p>
             <?php 
             $bdd = $bdd->connectBdd();

@@ -47,7 +47,7 @@ isLoggedIn();
     <button onclick="" id="button">Lancer la partie</button>
 
 
-    
+
     <p id="chrono"></p>
 
     <div id="gril"></div>
