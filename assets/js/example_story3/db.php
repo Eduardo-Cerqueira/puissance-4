@@ -1,20 +1,14 @@
 <?php
 
 $pdo = new PDO("mysql:host=localhost;dbname=puissance4" ,"root", "");
+$sql = $pdo->query("SELECT * FROM Score INNER JOIN Users ON Score.player_id = Users.id INNER JOIN Game ON Score.game_id = Game.id WHERE username = "."'".$_SESSION['username']."'"." and Score.id = ".$a);
+$row = $sql->fetch();
 
-if($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = htmlspecialchars(trim($_POST["name"]));
-    $comment = htmlspecialchars(trim($_POST["comment"]));
-    
-    // Check if form fields values are empty
-    if(!empty($name) && !empty($comment)) {
-        echo "<p>Hi, <b>$name</b>. Your comment has been received successfully.<p>";
-        echo "<p>Here's the comment that you've entered: <b>$comment</b></p>";
-    } else {
-        echo "<p>Please fill all the fields in the form!</p>";
-    }
-} else {
-    echo "<p>Something went wrong. Please try again.</p>";
-}
+$game_finished = true; 
 
+if($game_finished == true) {
+    $pdo = new PDO("mysql:host=localhost;dbname=puissance4" ,"root", "");
+    $query = "INSERT INTO Score (player_id ,game_id , game_difficulty, score) VALUES (".$_SESSION['player_id'].",".$_SESSION['game_id'].",".$_SESSION['game_difficulty'].",".$_SESSION['score'].") ON DUPLICATE KEY UPDATE Score=".$_SESSION['score']."";
+    $req = $pdo->prepare($query);
+    $req->execute();
 ?>
