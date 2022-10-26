@@ -3,7 +3,6 @@
 <html lang="en">
 
 <head>
-    <script src="assets/register.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -42,7 +41,6 @@ $bdd = new database();
                 .error{ color: red; }
                 .success{ color: green; }
             </style>
-            <div id="div1" class="div" style="background-color: black;" oninput="javascript:validate()"></div>
             <p>
                 <label for="inputUsername">Username:<sup>*</sup></label>
                 <input type="text" name="username" id="inputUsername" value="<?php echo $username; ?>">
@@ -109,6 +107,7 @@ $bdd = new database();
             </ul>
         </div>
     </footer>
+    <script src="assets/js/register.js"></script>
 </body>
 
 </html>

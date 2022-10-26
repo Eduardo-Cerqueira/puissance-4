@@ -1,4 +1,4 @@
-* {
+   * {
     margin: 0;
     padding: 0;
 }
@@ -70,4 +70,48 @@ input:hover {
 
 .login h2 {
     color: white;
+}
+
+.progress {
+    height: .4rem;
+    width: 100%;
+    background-color: #f5f5f5;
+    border-radius: .4rem;
+}
+
+.bar {
+    width: 0%;
+    height: 100%;
+    background-color: unset;
+    border-radius: inherit;
+    transition: .4s ease-in-out;
+}
+
+.input-group {
+    position: relative;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.input-group::before {
+    position: absolute;
+    content: '\1f512';
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+input#password {
+    width: 100%;
+    padding: 1rem 1rem 1rem 2.8rem;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    font-size: 1rem;
+    border-radius: .5rem;
+
+    border: none;
+}
+
+h5 {
+    margin: 3rem 0 1.5rem;
 }
