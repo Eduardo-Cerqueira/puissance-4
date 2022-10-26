@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,13 +20,11 @@
         include './assets/php/view/header.inc.php';
         include './assets/php/includes/dynamique.php';
         $dynamique = new dynamique;
-        
-
         ?>
         <div class="titles">
             <h1>Bienvenue dans <br> notre studio !</h1>
             <h2>Venez challenger les cerveaux les plus agiles !</h2>
-            <input type="button" value="JOUER !">
+            <?php include 'assets/php/index_.php'; ?>
         </div>
     </header>
     <section id="paragraphs">
@@ -160,57 +159,10 @@
         </div>
     </section>
 
-    <section id="chat">
-        <div class="hchat">
-            <img id="robot" src="assets/images/Feb.webp" alt="image robot">
-            <p>Chat général</p>
-        </div>
-        <div class="chat-body">
-            <div class="user-msg">
-                <p class="user-name" id="me">Moi</p>
-                <p class="msg user" id="hello">Hello</p>
-                <p class="date-msg">Aujourd'hui à 14h32</p>
-            </div>
-            <div class="sav-msg">
-                <p class="sav-name">Arthur</p>
-                <p class="msg sav">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet iure fugit
-                    exercitationem placeat voluptates ditate.</p>
-                <p class="date-msg">Aujourd'hui à 14h32</p>
-            </div>
-            <div class="sav-msg">
-                <p class="sav-name">Arthur</p>
-                <p class="msg sav">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet iure fugit
-                    exercitationem placeat voluptates ditate.</p>
-                <p class="date-msg">Aujourd'hui à 14h32</p>
-            </div>
-            <div class="user-msg">
-                <p class="user-name">Moi</p>
-                <p class="msg user">Comment ça va ?</p>
-                <p class="date-msg">Aujourd'hui à 14h33</p>
-            </div>
-            <div class="sav-msg">
-                <p class="sav-name">Arthur</p>
-                <p class="msg sav">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet iure fugit
-                    exercitationem placeat voluptates ditate.</p>
-                <p class="date-msg">Aujourd'hui à 14h32</p>
-            </div>
-            <div class="sav-msg">
-                <p class="sav-name">Arthur</p>
-                <p class="msg sav">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet iure fugit
-                    exercitationem placeat voluptates ditate.</p>
-                <p class="date-msg">Aujourd'hui à 14h32</p>
-            </div>
-        </div>
-        <div class="chat-footer">
-            <form action="">
-                <input type="text" placeholder="Rentrer votre message ...">
-                <input type="submit" value="Envoyer">
-            </form>
-        </div>
-    </section>
+    <?php
+    include 'chat.php';
 
-    <?php 
-    include './assets/php/view/footer.inc.php';
+    include 'assets/php/view/footer.inc.php';
     ?>
 
 

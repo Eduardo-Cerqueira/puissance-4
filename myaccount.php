@@ -1,3 +1,7 @@
+<?php session_start(); 
+include 'assets/php/login_.php';
+isLoggedIn();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,7 +38,7 @@
 
         <form action="./assets/php/includes/myaccount_traitement2.php" method="post">
             <!-- // TODO mettre le chemin vers le myaccount_traitement.php dans le action-->
-            <p>monmail@gmail.com</p>
+            <p><?php echo $_SESSION["email"]; ?></p>
             <label for="mail">Nouvelle adresse mail</label>
             <input type="text" name="mail" id="" class="champs">
             <label for="password">Password</label>

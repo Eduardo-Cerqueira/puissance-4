@@ -1,4 +1,4 @@
-    <footer>
+<footer>
         <div class="informations">
             <p class="footer-title">Information</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt officia tempora</p>

@@ -1,3 +1,7 @@
+<?php session_start(); 
+include 'assets/php/login_.php';
+isLoggedIn();
+?>
 <!DOCTYPE html>
 <html lang="en">
 

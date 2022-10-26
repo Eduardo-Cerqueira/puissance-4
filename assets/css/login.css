@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-color: rgb(21, 28, 56);
+}
+
+.form-control {
+    width: 300px;
+    height: 30px;
+    font-size: 20px;
+    background-color: rgb(68, 46, 68);
+    border: gray 2px solid;
+    color: white;
+    font-family: "Open Sans";
+
+}
+
+.button {
+    width: 300px;
+    height: 30px;
+    background-color: rgb(101, 75, 68);
+    color: white;
+    font-family: "Open Sans";
+    font-size: 20px;
+}

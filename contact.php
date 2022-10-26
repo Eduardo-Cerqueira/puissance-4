@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +9,8 @@
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/contact.css">
     <link rel="stylesheet" href="assets/css/footer.css">
-    <title>Document</title>
+    <title>Contact</title>
+    <link rel = "icon" href = "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fcdn.onlinewebfonts.com%2Fsvg%2Fimg_266091.png&f=1&nofb=1&ipt=f0790033aa849c657ee6f46535bafb126fa13d269814ac1fda97d2196e1a378f&ipo=images" type = "image/x-icon">
 </head>
 
 <body>

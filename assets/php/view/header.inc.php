@@ -7,5 +7,6 @@
         <li><a href="score.php">Scores</a></li>
         <li><a href="contact.php">Nous contacter</a></li>
         <li><a href="myaccount.php">Mon compte</a></li>
+        <li><a href="login.php">Log In</a></li>
     </ul>
 </nav>

@@ -1,4 +1,13 @@
 <?php
+function isLoggedIn() {
+   if (empty($_SESSION["valid"])) {
+      header("Location: login.php");
+      die("Redirecting to login.php");
+   }
+}
+
+?>
+<?php
 
 function getUserAllInfo($username_email,$password,$num){
    $pdo = new PDO("mysql:host=localhost;dbname=puissance4" ,"root", "");
@@ -8,38 +17,42 @@ function getUserAllInfo($username_email,$password,$num){
 }
 
 function loginuser(){
+   error_reporting(0);
 
    $password = ($_POST['password']);
 
-if (isset($_POST['login']) && !empty($_POST['username']) && strlen($password) >= 8) {
-   $username_email = ($_POST['username']);
-   $password = ($_POST['password']);
-   $hashpassword = hash('sha256', $password);
-   
-   $dbusername = getUserAllInfo($username_email,$password,1);
-   $dbpassword = getUserAllInfo($username_email,$password,2);
-   $dbemail = getUserAllInfo($username_email,$password,3);
-   
-   if ($hashpassword == $dbpassword) {
-      $_SESSION['valid'] = true;
-      $_SESSION['timeout'] = time();
-      $_SESSION['user_id'] = $dbusername;
-      $_SESSION['email'] = $dbemail;
-
-      $pdo = new PDO("mysql:host=localhost;dbname=puissance4" ,"root", "");
-      $query = 'UPDATE Users SET last_connection = NOW() WHERE username = '."'".$dbusername."'";
-      $req = $pdo->prepare($query);
-      $req->execute();
+   if (isset($_POST['login']) && !empty($_POST['username']) && strlen($password) >= 8) {
+      $username_email = ($_POST['username']);
+      $password = ($_POST['password']);
+      $hashpassword = hash('sha256', $password);
       
-      echo 'You have entered valid use name and password';
-   } else {
-      echo 'Email ou mot de passe invalide';
+      $dbusername = getUserAllInfo($username_email,$password,1);
+      $dbpassword = getUserAllInfo($username_email,$password,2);
+      $dbemail = getUserAllInfo($username_email,$password,3);
+      $player_id = getUserAllInfo($username_email,$password,0);
+      
+      if ($hashpassword == $dbpassword) {
+         $_SESSION['valid'] = true;
+         $_SESSION['timeout'] = time();
+         $_SESSION['user_id'] = $dbusername;
+         $_SESSION['email'] = $dbemail;
+         $_SESSION['player_id'] = $player_id;
+         $_SESSION['game_id'] = 0;
+   
+         $pdo = new PDO("mysql:host=localhost;dbname=puissance4" ,"root", "");
+         $query = 'UPDATE Users SET last_connection = NOW() WHERE username = '."'".$dbusername."'";
+         $req = $pdo->prepare($query);
+         $req->execute();
+         
+         echo 'You have entered valid use name and password';
+      } else {
+         echo 'Email ou mot de passe invalide';
+      }
+   }
+   else if (isset($_POST['login']) && !empty($_POST['username']) && strlen($password) < 8) {
+      echo 'Mot de passe trop court';
    }
 }
-else if (strlen($password) < 8) {
-   echo 'Mot de passe trop court';
-}
-}
-
+   
 //add line sql to last_connection
 ?>
