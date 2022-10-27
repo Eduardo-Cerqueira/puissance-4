@@ -17,11 +17,11 @@
         </div>
 
         <div class="media-links">
-            <a class="media-link" href="#"><img src="assets/images/icons8-facebook-nouveau.svg" alt=""></a>
-            <a class="media-link" href="#"> <img src="assets/images/icons8-twitter.svg" alt=""></a>
-            <a class="media-link" href="#"> <img src="assets/images/icons8-logo-google.svg" alt=""></a>
-            <a class="media-link" href="#"><img src="assets/images/pinterest-2.svg" alt=""></a>
-            <a class="media-link" href="#"> <img src="assets/images/icons8-instagram.svg" alt=""></a>
+            <a class="media-link" href="#"><img id="image-footer" src="assets/images/icons8-facebook-nouveau.svg" alt=""></a>
+            <a class="media-link" href="#"> <img id="image-footer" src="assets/images/icons8-twitter.svg" alt=""></a>
+            <a class="media-link" href="#"> <img id="image-footer" src="assets/images/icons8-logo-google.svg" alt=""></a>
+            <a class="media-link" href="#"><img id="image-footer" src="assets/images/pinterest-2.svg" alt=""></a>
+            <a class="media-link" href="#"> <img id="image-footer" src="assets/images/icons8-instagram.svg" alt=""></a>
         </div>
 
         <p id="copyright">© 2022 Coding Factory Made with ❤️</p>
