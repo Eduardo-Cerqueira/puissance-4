@@ -1,4 +1,3 @@
-
 <?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,12 +11,9 @@
     <link rel="stylesheet" href="assets/css/register.css">
     <link rel="stylesheet" href="assets/css/footer.css">
 </head>
-<?php
 
-require "assets/php/includes/database.inc.php"; 
-require "assets/php/register_.php"; 
-$bdd = new database();
-?>
+<?php require "assets/php/includes/database.inc.php"; require "assets/php/register_.php"; $bdd = new database(); ?>
+
 <body>
     <header id="myaccountheader">
         <?php include './assets/php/view/header.inc.php' ?>
@@ -26,27 +22,28 @@ $bdd = new database();
         </div>
     </header>
     <div class="login">
-        <form action="register.php"method="post">
+        <form action="register.php" method="post">
             <h2>Veuillez entrer vos informations : </h2>
             <style type="text/css">
-                .error{ color: red; }
-                .success{ color: green; }
+                .error {
+                    color: red;
+                }
+
+                .success {
+                    color: green;
+                }
             </style>
             <p>
-                <label for="inputUsername">Username:<sup>*</sup></label>
-                <input type="text" name="username" id="inputUsername">
+                <input type="text" name="username" id="inputUsername" placeholder="Username">
             </p>
             <p>
-                <label for="inputMail">Email:<sup>*</sup></label>
-                <input type="text" name="mail" id="inputMail">
+                <input type="text" name="mail" id="inputMail" placeholder="Email">
             </p>
             <p>
-                <label for="inputPass">Mot de passe:<sup>*</sup></label>
-                <input type="text" name="pass" id="inputPass">
+                <input type="text" name="pass" id="inputPass" placeholder="Mot de passe">
             </p>
             <p>
-                <label for="inputConfirmPass">Confirmer le mot de passe:<sup>*</sup></label>
-                <input type="text" name="confirmpass" id="inputConfirmPass">
+                <input type="text" name="confirmpass" id="inputConfirmPass" placeholder="Confirmer le mot de passe">
             </p>
             <?php 
             $bdd = $bdd->connectBdd();

@@ -24,3 +24,11 @@ body {
     font-family: "Open Sans";
     font-size: 20px;
 }
+
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}

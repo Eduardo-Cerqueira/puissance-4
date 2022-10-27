@@ -1,3 +1,7 @@
+.stats {
+    margin-top: 10vh;
+}
+
 #table {
     font-family: 'Open Sans', sans-serif;
     border-collapse: collapse;
