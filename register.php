@@ -34,14 +34,18 @@
             </p><br>
             <p>
                 <label for="inputPass">Mot de passe:<sup><br></sup></label>
-                <input type="password" name="pass" id="inputPass">
+                    <input type="password" name="pass" id="password">
+                <div class="progress">
+                    <div class ="bar"></div>
+                </div>
+                <script src="./assets/js/register.js"></script>
             </p><br>
             <p>
                 <label for="inputConfirmPass">Confirmer le mot de passe:<sup><br></sup></label>
                 <input type="password" name="confirmpass" id="inputConfirmPass">
             </p><br>
-            <input type="submit" value="Send">
-            <input type="reset" value="Reset">
+            <input class="button-submit-reset" type="submit" value="Send">
+            <input class="button-submit-reset" type="reset" value="Reset">
         </form>
     </div>
     <?php include './assets/php/view/footer.inc.php'; ?>
