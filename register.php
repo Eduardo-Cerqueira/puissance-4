@@ -52,9 +52,16 @@ $bdd = new database();
                 <span class="error"><?php echo $mailErr; ?></span>
             </p>
             <p>
-                <label id="mdp" for="inputPass">Mot de passe:<sup>*</sup></label>
-                <input type="text" name="pass" id="inputPass" value="<?php echo $password; ?>">
-                <span id="msg" class="error"><?php echo $passwordErr; ?></span>
+            <div class="password-checker">
+                <div class="input-group">
+                    <input type="text" id="password" placeholder="Mot de passe...">
+                </div>
+                <div class="progress">
+                    <div class ="bar"></div>
+                </div>
+                <script src="./assets/js/register.js"></script>
+                
+            
             </p>
             <p>
                 <label for="inputConfirmPass">Confirmer le mot de passe:<sup>*</sup></label>
@@ -107,7 +114,5 @@ $bdd = new database();
             </ul>
         </div>
     </footer>
-    <script src="assets/js/register.js"></script>
 </body>
-
 </html>

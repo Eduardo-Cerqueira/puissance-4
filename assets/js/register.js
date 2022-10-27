@@ -1,4 +1,4 @@
-const password_checker = document.querySelector('password-checker');
+const password_checker = document.querySelector('.password-checker');
 const password = document.querySelector('#password');
 const progress_bar = document.querySelector('.bar');
 
@@ -18,7 +18,7 @@ function checkPasswordStrength(password) {
 
     if (password.match(/(?=.*[`!@#$%&*])/)) strength++; // Si Contient une majusucle
 
-    if (password.match(/(?=.{9})/)) strength++; // Si Contient une majusucle
+    if (password.match(/(?=.{8})/)) strength++; // Si Contient une majusucle
 
     console.log(strength);
 
