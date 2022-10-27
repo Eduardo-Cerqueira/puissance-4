@@ -1,5 +1,11 @@
+body {
+    margin: 0%;
+    background-color: #191442;
+}
+
 .stats {
-    margin-top: 10vh;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
 }
 
 #table {
