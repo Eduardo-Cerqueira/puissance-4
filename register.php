@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="assets/css/footer.css">
 </head>
 
-<?php require "assets/php/includes/database.inc.php"; require "assets/php/register_.php"; $bdd = new database(); ?>
+<?php require "assets/php/includes/database.inc.php"; $bdd = new database(); ?>
 
 <body>
     <header id="myaccountheader">
@@ -22,33 +22,17 @@
         </div>
     </header>
     <div class="login">
-        <form action="register.php" method="post">
-            <h2>Veuillez entrer vos informations : </h2>
-            <style type="text/css">
-                .error {
-                    color: red;
-                }
-
-                .success {
-                    color: green;
-                }
-            </style>
-            <p>
-                <input type="text" name="username" id="inputUsername" placeholder="Username">
-            </p>
-            <p>
-                <input type="text" name="mail" id="inputMail" placeholder="Email">
-            </p>
-            <p>
-                <input type="text" name="pass" id="inputPass" placeholder="Mot de passe">
-            </p>
-            <p>
-                <input type="text" name="confirmpass" id="inputConfirmPass" placeholder="Confirmer le mot de passe">
-            </p>
-            <?php 
+        <?php
+            require "assets/php/register_.php";
             $bdd = $bdd->connectBdd();
             register($bdd);
-            ?>
+        ?>
+        <form action="register.php" method="post">
+            <h2>Veuillez entrer vos informations : </h2>
+            <input type="text" name="username" placeholder="Username">
+            <input type="text" name="email" placeholder="Email">
+            <input type="password" name="password" placeholder="Mot de passe">
+            <input type="password" name="confirmpass" placeholder="Confirmer le mot de passe">
             <input type="submit" value="Send">
             <input type="reset" value="Reset">
         </form>
