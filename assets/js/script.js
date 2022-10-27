@@ -5,7 +5,7 @@ var mode = document.getElementById('menu')
 var difficulty, theme, griltete;
 var gril = document.getElementById('gril')
 var jeu = document.getElementById('nilou')
-var button = document.getElementById('button');
+var button = document.getElementById('jouer');
 
 /* chronometre */
 
@@ -100,13 +100,14 @@ button.addEventListener('click', function () {
         for (let index = 0; index < difficulty; index++) {
             var row = document.createElement('tr')
             for (let i = 0; i < difficulty; i++) {
-                var random = Math.floor(Math.random() * ((allCard.length-1)+1));
-
+                var random = Math.floor(Math.random() * (allCard.length-1)+1);
                 var imgSrc = `./assets/images/themes/${themes.value}/${themes.value}${allCard[random - 1]}.jpeg`
-                allCard.splice(random-1,1);
                 var cas = document.createElement("td")
                 var img = document.createElement('img')
                 img.src = imgSrc
+
+                allCard.splice(random-1,1);
+
                 cas.appendChild(img)
                 row.appendChild(cas)
 
