@@ -95,27 +95,50 @@ button.addEventListener('click', function() {
         griltete = document.createElement('table')
         var grilcorp = document.createElement('tbody')
 
+        var x = 0
+
         for (let index = 0; index < difficulty; index++) {
             var row = document.createElement('tr')
             for (let i = 0; i < difficulty; i++) {
                 var random = Math.floor(Math.random() * (allCard.length - 1) + 1);
-                var imgSrc = `./assets/images/themes/${themes.value}/${themes.value}${allCard[random - 1]}.jpeg`
+                var img2Src = `./assets/images/themes/${themes.value}/${themes.value}${allCard[random - 1]}.jpeg`
+                var imgSrc = './assets/images/1209874.jpeg'
                 var cas = document.createElement("td")
+                var div = document.createElement("div")
+                var divFront = document.createElement("div")
+                var divBack = document.createElement("div")
                 var img = document.createElement('img')
+                var img2 = document.createElement('img')
                 img.src = imgSrc
+                img2.src = img2Src
+
+                div.className = 'card'
+                div.id = "card" + x
+                div.setAttribute("onclick", "javascript:flipCard('card" + x + "')")
+
+                divBack.className = 'front'
+                divFront.className = 'back'
 
                 allCard.splice(random - 1, 1);
 
-                cas.appendChild(img)
+                divFront.appendChild(img2)
+                divBack.appendChild(img)
+                div.appendChild(divBack)
+                div.appendChild(divFront)
+                cas.appendChild(div)
                 row.appendChild(cas)
-
+                x++
             }
             grilcorp.appendChild(row)
         }
-        console.log(allCard);
-        griltete.appendChild(grilcorp);
+        griltete.appendChild(grilcorp)
         jeu.appendChild(griltete)
 
+        console.log(griltete)
     }
 
 })
+
+function flipCard(ID) {
+    document.getElementById(ID).classList.toggle("flipCard")
+}

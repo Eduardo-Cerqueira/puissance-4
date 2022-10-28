@@ -64,7 +64,7 @@ table {
     align-items: center; */
 }
 
-#nilou{
+#nilou {
     display: flex;
     align-items: center;
 }
@@ -84,29 +84,29 @@ td img {
     height: 100%;
 }
 
-.btn{
+.btn {
     margin: 5px;
 }
 
-img{
+img {
     height: 100%;
     width: 100%;
 
 }
 
-label{
+label {
     color: rgb(254, 253, 254);
     margin: 30px 0px;
-} 
+}
 
-#conteneur{
+#conteneur {
     display: flex;
     margin-top: 30px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 
-    
+
 }
 
 /* section{
@@ -121,37 +121,67 @@ label{
 
 }  */
 
-#jouer{
+#jouer {
     margin-top: 100px;
     padding: 30px;
     background-color: rgb(235, 114, 16);
     font-family: 'Open Sans', sans-serif;
 
 
-} 
+}
 
-#jouer:hover{
+#jouer:hover {
     box-shadow: white;
 }
 
-table{
+table {
     border-spacing: 20px;
 }
 
-#chrono-div{
+#chrono-div {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#chrono{
-    color:rgb(255, 255, 255);
+#chrono {
+    color: rgb(255, 255, 255);
     text-transform: uppercase;
-    
+
 }
 
-#ss{
+#ss {
     display: flex;
     flex-direction: column;
 }
 
+/*flip  card*/
+
+.front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    text-align: center;
+}
+
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    text-align: center;
+    transform: rotateY(180deg);
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease;
+}
+
+.flipCard {
+    transform: rotateY(180deg);
+}
