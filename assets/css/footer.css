@@ -38,8 +38,14 @@ footer {
     margin-top: auto;
 }
 
+#image-footer{
+    height: 15px;
+    width: 15px;
+}
+
 .media-links {
     margin-top: 10px;
+
 }
 
 .media-link {
@@ -69,4 +75,9 @@ footer {
 
 .footer-nav li {
     margin: 10px 0px;
+}
+
+#ss{
+    display: flex;
+    flex-direction: column;
 }

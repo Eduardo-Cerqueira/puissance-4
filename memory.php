@@ -1,6 +1,6 @@
-<?php session_start(); 
-include 'assets/php/login_.php';
-isLoggedIn();
+<?php session_start();
+/* include 'assets/php/login_.php';
+isLoggedIn(); */
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,29 +26,35 @@ isLoggedIn();
             <h1>Memory</h1>
         </div>
     </header>
+    
+    <section id="conteneur">
+        
 
-    <label for="menu">Veuillez choisir la difficulté :</label>
-    <select name="menu" id="menu">
-        <option value="">Choisir</option>
-        <option value="easy">Facile</option>
-        <option value="medium">Moyen</option>
-        <option value="hard">Difficile</option>
-        <option value="impossible">Extrem</option>
-    </select>
+            <form action="" id="ss">
+                <label for="menu">Veuillez choisir la difficulté :</label>
+                <select name="menu" id="menu">
+                    <option value="">Choisir</option>
+                    <option value="easy">Facile</option>
+                    <option value="medium">Moyen</option>
+                    <option value="hard">Difficile</option>
+                    <option value="impossible">Extrem</option>
+                </select>
 
-    <label for="theme">Veuillez choisir le thème :</label>
-    <select name="theme" id="theme">
-        <option value="">Choisir</option>
-        <option value="waifu">waifu</option>
-        <option value="waifu">waifu</option>
-        <option value="waifu">waifu</option>
-    </select>
+                <label for="theme">Veuillez choisir le thème :</label>
+                <select name="theme" id="theme">
+                    <option value="">Choisir</option>
+                    <option value="waifu">waifu</option>
+                    <option value="waifu">waifu</option>
+                    <option value="waifu">waifu</option>
+                </select>
+            </form>
+            <button onclick="" id="jouer">Lancer la partie</button>
+      
+    </section>
 
-    <button onclick="" id="button">Lancer la partie</button>
-
-
-
-    <p id="chrono"></p>
+    <div id="chrono-div">
+        <p id="chrono"></p>
+    </div>
 
     <div id="gril"></div>
 
