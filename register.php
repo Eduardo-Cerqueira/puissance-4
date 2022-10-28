@@ -1,4 +1,3 @@
-
 <?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,12 +11,7 @@
     <link rel="stylesheet" href="assets/css/register.css">
     <link rel="stylesheet" href="assets/css/footer.css">
 </head>
-<?php
 
-require "assets/php/includes/database.inc.php"; 
-require "assets/php/register_.php"; 
-$bdd = new database();
-?>
 <body>
     <header id="myaccountheader">
         <?php include './assets/php/view/header.inc.php' ?>
@@ -26,34 +20,32 @@ $bdd = new database();
         </div>
     </header>
     <div class="login">
-        <form action="register.php"method="post">
-            <h2>Veuillez entrer vos informations : </h2>
-            <style type="text/css">
-                .error{ color: red; }
-                .success{ color: green; }
-            </style>
+
+        <form class="loginin" action="register.php" method="post">
+            <h2>Veuillez entrer vos informations : </h2><br>
+            <?php require 'assets/php/register_.php'; register(); ?>
             <p>
-                <label for="inputUsername">Username:<sup>*</sup></label>
+                <label for="inputUsername">Username:<sup><br></sup></label>
                 <input type="text" name="username" id="inputUsername">
-            </p>
+            </p><br>
             <p>
-                <label for="inputMail">Email:<sup>*</sup></label>
+                <label for="inputMail">Email:<sup><br></sup></label>
                 <input type="text" name="mail" id="inputMail">
-            </p>
+            </p><br>
             <p>
-                <label for="inputPass">Mot de passe:<sup>*</sup></label>
-                <input type="text" name="pass" id="inputPass">
-            </p>
+                <label for="inputPass">Mot de passe:<sup><br></sup></label>
+                    <input type="password" name="pass" id="password">
+                <div class="progress">
+                    <div class ="bar"></div>
+                </div>
+                <script src="./assets/js/register.js"></script>
+            </p><br>
             <p>
-                <label for="inputConfirmPass">Confirmer le mot de passe:<sup>*</sup></label>
-                <input type="text" name="confirmpass" id="inputConfirmPass">
-            </p>
-            <?php 
-            $bdd = $bdd->connectBdd();
-            register($bdd);
-            ?>
-            <input type="submit" value="Send">
-            <input type="reset" value="Reset">
+                <label for="inputConfirmPass">Confirmer le mot de passe:<sup><br></sup></label>
+                <input type="password" name="confirmpass" id="inputConfirmPass">
+            </p><br>
+            <input class="button-submit-reset" type="submit" value="Send">
+            <input class="button-submit-reset" type="reset" value="Reset">
         </form>
     </div>
     <?php include './assets/php/view/footer.inc.php'; ?>

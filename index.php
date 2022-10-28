@@ -14,7 +14,6 @@
 </head>
 
 <body>
-
     <header>
         <?php
         include './assets/php/view/header.inc.php';
