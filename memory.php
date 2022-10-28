@@ -26,7 +26,7 @@ isLoggedIn(); */
             <h1>Memory</h1>
         </div>
     </header>
-    
+
     <section id="conteneur">
         
 
@@ -55,7 +55,6 @@ isLoggedIn(); */
     <div id="chrono-div">
         <p id="chrono"></p>
     </div>
-
     <div id="gril"></div>
 
 
@@ -76,7 +75,7 @@ isLoggedIn(); */
     include './assets/php/view/footer.inc.php';
     ?>
 
-    <script src="assets/js/script.js"></script>
+    <script src="/assets/js/script.js"></script>
 
 </body>
 
