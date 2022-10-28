@@ -38,6 +38,7 @@
                 <div class="progress">
                     <div class ="bar"></div>
                 </div>
+                <p id="p1"></p>
                 <script src="./assets/js/register.js"></script>
             </p><br>
             <p>
