@@ -1,6 +1,6 @@
 <?php session_start();
-/* include 'assets/php/login_.php';
-isLoggedIn(); */
+include 'assets/php/login_.php';
+isLoggedIn();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -49,6 +49,7 @@ isLoggedIn(); */
                 </select>
             </form>
             <button onclick="" id="jouer">Lancer la partie</button>
+            <button onclick="" id="stop">Stop</button>
       
     </section>
 
@@ -59,6 +60,21 @@ isLoggedIn(); */
 
 
     <div id="nilou"></div>
+
+    <div class="loginPopup">
+        <div class="formPopup" id="popupForm">
+            <div class="formContainer">
+                <h2>Your Score</h2>
+                <label id = "showscore">
+                    <strong>score</strong>
+                </label>
+                <br><br><br>
+                <button type="submit" class="btn" id="retryornot" onclick="retry()">Retry</button>
+                <button type="button" class="btn cancel" id="openclose" onclick="not()">Close</button>
+            </div>
+        </div>
+    </div>
+    
 
 
 
