@@ -109,12 +109,16 @@ button.addEventListener('click', function() {
                 var divBack = document.createElement("div")
                 var img = document.createElement('img')
                 var img2 = document.createElement('img')
+
                 img.src = imgSrc
                 img2.src = img2Src
 
                 div.className = 'card'
                 div.id = "card" + x
                 div.setAttribute("onclick", "javascript:flipCard('card" + x + "')")
+                div.setAttribute("text", "front")
+                div.setAttribute("value", img2Src)
+
 
                 divBack.className = 'front'
                 divFront.className = 'back'
@@ -139,6 +143,43 @@ button.addEventListener('click', function() {
 
 })
 
+var lastFlip
+var lastFlipID
+var total = 0
+var waitingTime = true
+
 function flipCard(ID) {
-    document.getElementById(ID).classList.toggle("flipCard")
+    if (difficulty**2 != total) {
+        if (document.getElementById(ID).getAttribute('text') == "front" && waitingTime) {
+            time = 1000
+            if (lastFlip == null) {time = 300}
+            document.getElementById(ID).classList.toggle("flipCard")
+            document.getElementById(ID).setAttribute("text", "back")
+            waitingTime = false
+            setTimeout(function () {
+                if (lastFlip != null) {
+                    if (document.getElementById(ID).getAttribute('value') == lastFlip) {
+                        total += 2
+                        if (difficulty**2 == total) {
+                            console.log('win')
+                            // fonction envoie score sql
+                        }
+                    }
+                    else {
+                        document.getElementById(ID).classList.toggle("flipCard")
+                        document.getElementById(ID).setAttribute("text", "front")
+                        document.getElementById(lastFlipID).classList.toggle("flipCard")
+                        document.getElementById(lastFlipID).setAttribute("text", "front")
+                    }
+                    lastFlip = null
+                    lastFlipID = null
+                }
+                else {
+                    lastFlip = document.getElementById(ID).getAttribute('value')
+                    lastFlipID = ID
+                }
+                waitingTime = true
+            }, time)
+        }
+    }
 }
