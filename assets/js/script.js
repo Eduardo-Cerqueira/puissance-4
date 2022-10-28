@@ -5,7 +5,9 @@ var mode = document.getElementById('menu')
 var difficulty, theme, griltete;
 var gril = document.getElementById('gril')
 var jeu = document.getElementById('nilou')
-var button = document.getElementById('jouer');
+var button = document.getElementById('jouer')
+var chronodiv = document.getElementById('chrono-div')
+var chrono2 = document.getElementById('chrono')
 
 /* chronometre */
 
@@ -71,8 +73,9 @@ function fillCardArray() {
     } else fillCardArray();
 }
 
-button.addEventListener('click', function() {
 
+
+function gamestart() {
     // On remplit AllCard pour sélectionner par la suite une valeur random à l'intérieur
     for (let index = 0; index < (difficulty ** 2) / 2; index++) {
         fillCardArray();
@@ -141,6 +144,19 @@ button.addEventListener('click', function() {
         console.log(griltete)
     }
 
+}
+
+button.addEventListener('click', function() {
+    gamestart()
+})
+
+document.getElementById("stop").addEventListener('click', function() {
+    jeu.removeChild(griltete)
+    total = difficulty ** 2
+    document.getElementById("showscore").innerHTML = 0
+    chronodiv.removeChild(chrono2)
+    Game = end
+    opencloseForm()
 })
 
 var lastFlip
@@ -148,24 +164,36 @@ var lastFlipID
 var total = 0
 var waitingTime = true
 
+function gamedifficulty() {
+    return difficulty
+}
+
+function returnscore() {
+    return scoreend
+}
+
 function flipCard(ID) {
-    if (difficulty**2 != total) {
+    if (difficulty ** 2 != total) {
         if (document.getElementById(ID).getAttribute('text') == "front" && waitingTime) {
             time = 1000
-            if (lastFlip == null) {time = 300}
+            if (lastFlip == null) {
+                time = 300
+            }
             document.getElementById(ID).classList.toggle("flipCard")
             document.getElementById(ID).setAttribute("text", "back")
             waitingTime = false
-            setTimeout(function () {
+            setTimeout(function() {
                 if (lastFlip != null) {
                     if (document.getElementById(ID).getAttribute('value') == lastFlip) {
                         total += 2
-                        if (difficulty**2 == total) {
+                        if (difficulty ** 2 == total) {
                             console.log('win')
-                            // fonction envoie score sql
+                            Game = end
+                            scoreend = total * 7 / min
+                            document.getElementById("showscore").innerHTML = scoreend
+                            opencloseForm()
                         }
-                    }
-                    else {
+                    } else {
                         document.getElementById(ID).classList.toggle("flipCard")
                         document.getElementById(ID).setAttribute("text", "front")
                         document.getElementById(lastFlipID).classList.toggle("flipCard")
@@ -173,8 +201,7 @@ function flipCard(ID) {
                     }
                     lastFlip = null
                     lastFlipID = null
-                }
-                else {
+                } else {
                     lastFlip = document.getElementById(ID).getAttribute('value')
                     lastFlipID = ID
                 }
@@ -182,4 +209,33 @@ function flipCard(ID) {
             }, time)
         }
     }
+}
+
+if (difficulty ** 2 == total) {
+    Game = end
+    scoreend = total * 7 / min
+    document.getElementById("showscore").innerHTML = scoreend
+    opencloseForm()
+}
+
+function opencloseForm() {
+    if (Game == end) {
+        document.getElementById("popupForm").style.display = "block";
+        Game = end;
+    } else {
+        document.getElementById("popupForm").style.display = "none";
+        Game = hide;
+    }
+}
+
+function retry() {
+    jeu.appendChild(griltete)
+    chronodiv.appendChild(chrono2)
+    gamestart()
+    total = 0
+    document.getElementById("popupForm").style.display = "none";
+}
+
+function not() {
+    window.location.pathname = "/puissance-4/score.php"
 }
